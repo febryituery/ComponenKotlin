@@ -71,12 +71,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun openFileManager() {
-        if (allPermissionsGranted()) {
-            //open intent file manager
-        } else {
-            appType = 2
-            requestPermissions()
-        }
+        appType = 2
+        startActivity(Intent(this, InternalStorageActivity::class.java))
     }
 
     companion object {
